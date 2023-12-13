@@ -28,12 +28,12 @@ Particle() {
 void move() {
         starsin = starsin + (Math.cos(angularmovement) * starcount);
         starcos = starcos - (Math.sin(angularmovement) * starcount);
-        starsin ++;
-        starcos ++;
+        angularmovement = Math.PI*2*Math.random();
 }
 void show() {
   fill(starcolor);
   ellipse((float)starsin, (float)starcos, starbody, starbody);
+  fill(0);
 }
 }
 class Oddball extends Particle {
