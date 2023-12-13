@@ -11,7 +11,6 @@ void draw() {
         for(int i = 0;i < 100; i++) {
         Starfield[i].move();
         Starfield[i].show();
-        background(0xFFFFFF);
         }
 }
 class Particle {
