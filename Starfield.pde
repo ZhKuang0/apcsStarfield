@@ -34,7 +34,6 @@ void move() {
 }
 void show() {
   fill(starcolor);
-  background(0xFFFFFF);
   ellipse((float)starsin, (float)starcos, starbody, starbody);
 }
 }
