@@ -1,7 +1,7 @@
 Particle[] Starfield = new Particle[100];
 void setup() {
         size(700,700);
-        background(0xFFFFFF);
+        background(0x000000);
         for(int i = 0; i < 5; i++)
         Starfield[i] = new Oddball();
         for(int i = 5; i < Starfield.length; i++)
@@ -28,7 +28,6 @@ Particle() {
 void move() {
         starsin = starsin + (Math.cos(angularmovement) * starcount);
         starcos = starcos - (Math.sin(angularmovement) * starcount);
-        angularmovement = Math.PI*2*Math.random();
 }
 void show() {
   fill(starcolor);
