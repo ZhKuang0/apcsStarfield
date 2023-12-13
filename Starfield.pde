@@ -11,6 +11,7 @@ void draw() {
         for(int i = 0;i < 100; i++) {
         Starfield[i].move();
         Starfield[i].show();
+        background(0xFFFFFF);
         }
 }
 class Particle {
@@ -28,9 +29,12 @@ Particle() {
 void move() {
         starsin = starsin + (Math.cos(angularmovement) * starcount);
         starcos = starcos - (Math.sin(angularmovement) * starcount);
+        starsin ++;
+        starcos ++;
 }
 void show() {
   fill(starcolor);
+  background(0xFFFFFF);
   ellipse((float)starsin, (float)starcos, starbody, starbody);
 }
 }
