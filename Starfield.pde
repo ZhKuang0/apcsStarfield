@@ -4,8 +4,8 @@ void setup() {
         background(0xFFFFFF);
         for(int i = 0; i < 5; i++)
         Starfield[i] = new Oddball();
-        for(int i = 5; i < star.length; i++)
-        star[i] = new Particle();
+        for(int i = 5; i < Starfield.length; i++)
+        Starfield[i] = new Particle();
 }
 void draw() {
         for(int i = 0;i < 100; i++) {
@@ -14,7 +14,7 @@ void draw() {
         }
 }
 class Particle {
-float starsin, starcos, angularmovement, baseposition, starcount;
+double starsin, starcos, angularmovement, baseposition, starcount;
 int starbody, starcolor;
 Particle() {
         starsin = 500;
@@ -30,10 +30,11 @@ void move() {
         starcos = starcos - (Math.sin(angularmovement) * starcount);
 }
 void show() {
-fill(starcolor);
-ellipse((float)starsin, (float)starcos, starbody, starbody);
+  fill(starcolor);
+  ellipse((float)starsin, (float)starcos, starbody, starbody);
 }
-class OddballParticle extends Particle {
+}
+class Oddball extends Particle {
 Oddball() {
     starsin = 500.0;
     starcos = 500.0;
